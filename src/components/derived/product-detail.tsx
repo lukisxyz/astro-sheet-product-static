@@ -49,7 +49,7 @@ export default function ProductDetail() {
                     alt={data.description}
                 />
             </div>
-            <div className="p-4 relative">
+            <div className="p-4 relative pb-32">
                 <h2 className="font-semibold text-3xl leading-tight text-gray-800">
                     {data.name}
                 </h2>
