@@ -1,0 +1,31 @@
+---
+import "@/styles/globals.css";
+import "@fontsource-variable/inter";
+import Footer from "./footer.astro";
+import Header from "./header.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="parent">
+		<Header />
+		<main class="w-full max-w-screen-lg mx-auto p-6">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.parent {
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		min-height: 100vh;
+	}
+</style>

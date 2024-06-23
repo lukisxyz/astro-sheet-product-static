@@ -1,0 +1,13 @@
+---
+import SectionHero from "@/components/derived/section-hero";
+import SectionHowTo from "@/components/derived/section-how-to.astro";
+import BaseLayout from "@/layouts/base-layout.astro";
+
+const baseUrl =
+    "https://script.google.com/macros/s/AKfycbxipYTD01Ttfu8g-SDFm3v39crLDRR2YuDxuVzNOhxdEbDYC7dkd7UvlncnApGSYlo4tg/exec";
+---
+
+<BaseLayout>
+    <SectionHero client:only="react" uri={baseUrl} />
+    <SectionHowTo />
+</BaseLayout>
