@@ -2,6 +2,7 @@ import useSWR from "swr";
 import { ProductCard, type ProductProps } from "./product-card";
 import { PaginationProduct } from "./pagination-product";
 import ProductCardSkeleton from "./product-card-skeleton";
+import { Button } from "../ui/button";
 
 const fetcher = (url: RequestInfo | URL) =>
     fetch(url).then((res) => res.json());
@@ -49,9 +50,6 @@ export default function SectionHero({ uri }: { uri: string }) {
                             <ProductCardSkeleton />
                             <ProductCardSkeleton />
                             <ProductCardSkeleton />
-                            <ProductCardSkeleton />
-                            <ProductCardSkeleton />
-                            <ProductCardSkeleton />
                         </ul>
                         <br />
                         <br />
@@ -76,6 +74,10 @@ export default function SectionHero({ uri }: { uri: string }) {
                             ))}
                         </ul>
                         <br />
+                        <br />
+                        <div className="text-center">
+                            <Button onClick={() => { window.location.href = "/product" }} className="text-lg h-16" size="lg" variant="outline">Temukan Produk Lain</Button>
+                        </div>
                         <br />
                     </>
                 )
