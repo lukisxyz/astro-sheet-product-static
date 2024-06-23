@@ -121,8 +121,8 @@ export default function ProductList({ uri }: { uri: string }) {
 			<br />
 			<br />
 			<PaginationProduct
-				next={`product${data.url.next}`}
-				prev={`product${data.url.prev}`}
+				next={data.url.next}
+				prev={data.url.prev}
 			/>
 		</>
 }
